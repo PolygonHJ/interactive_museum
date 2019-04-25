@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 
-import serial
+import board
+import neopixel
+
 from flask import Flask
 from flask import render_template
 
+
 app = Flask(__name__)
 
-lit_rooms = []
-rooms = [[0],
-        [1],
-        [2]]
+pixels = neopixel.NeoPixel(board.D18, 3)
+rooms = [0, 0, 0]
 
 
 @app.route('/')
@@ -17,25 +18,17 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/room<int:room_number>', methods=["GET"])
+@app.route('/room<int:room_number>')
 def handle_request(room_number):
     # Room state is controlled independantly in javascript and python
     response = 'Room ' + str(room_number) + ' toggled'
-    print(response)
+    rooms[room_number - 1] = (( rooms[room_number - 1] + 1) % 2)
+    
+    lit = [x for x in range(len(rooms)) if (rooms[x])]
+    print(lit)
 
-    # Create room array
-    ## Assuming only one led per room
-    if ( rooms[room_number-1][0] in lit_rooms ):
-        lit_rooms.remove(rooms[room_number-1][0])
-    else:
-        lit_rooms.append(rooms[room_number-1][0])
-
-    # Set serial device
-    ser = serial.Serial('dev/ttyUSB0')
-    print(ser.name)
-    ser.write(lit_rooms)
-    ser.close()
-
+    
+    
     return response, 200
 
 
