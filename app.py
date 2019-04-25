@@ -23,7 +23,8 @@ def handle_request(room_number):
     # Room state is controlled independantly in javascript and python
     response = 'Room ' + str(room_number) + ' toggled'
     rooms[room_number - 1] = (( rooms[room_number - 1] + 1) % 2)
-    
+
+    print('some')
     lit = [x for x in range(len(rooms)) if (rooms[x])]
     print(lit)
 

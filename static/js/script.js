@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	box.addEventListener("click", function() {
 	    var state = this.getAttribute('data-state');
 	    var room = this.classList[1];
-	    var URL = 'http://192.168.0.29:5000/' + room;
+	    var URL = 'http://192.168.0.10:5000/' + room;
 	    
 	    if (state === "off") {
 		this.style.backgroundColor = "#ddd";
