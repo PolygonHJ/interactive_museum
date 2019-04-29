@@ -22,7 +22,7 @@ The Pi will be powered with by one supply through it's USB micro-B port, althoug
 * The LEDs will be attached to the ceiling of each floor in the model.
 
 ## Usage
-The Pi will be programmed to automatically start the webserver with the user flow function on boot. In order to change the behaviour, the user must connect to the Pi's AP and access the Pi's ip address on port 5000 in any webbrowser.
+The Pi will be programmed to automatically start the webserver with the user flow function on boot. In order to change the behaviour, the user must connect to the Pi's AP and access the Pi's ip address on port 5000 in any web-browser.
 
 ## Requirements
 * Pi setup to run in [AP mode](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
@@ -33,9 +33,9 @@ The Pi will be programmed to automatically start the webserver with the user flo
 
 
 ## ToDo
-~~Python script sends the entire array~~ (removed arduino)
-~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed arduino)
+~~Python script sends the entire array~~ (removed arduino)  
+~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed arduino)  
 - [ ] Change IP address in JS  
-- [x] Make pi run local server
-- [ ] Change hostname of pi
-- [ ] Room status is controlled independantly in Python script and JS &rarr; update this
+- [x] Make pi run local server  
+- [ ] Change hostname of pi  
+- [ ] Room status is controlled independantly in Python script and JS &rarr; update this  
