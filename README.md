@@ -1,6 +1,6 @@
 # Interactive Museum
 
-A program to control ws2812b LEDs in a 1:200 scale model museum to demonstrate the user flow through the a museum.
+A program to control WS2812b LEDs in a 1:200 scale model museum to demonstrate the user flow through the a museum.
 It will also allow rooms to be individually lit from a web-app running locally on the Pi.
 
 ## User Flow
@@ -29,12 +29,13 @@ The Pi will be programmed to automatically start the webserver with the user flo
 * 5V, 4A power supply
 * Python3
 * Pip3
-* Pip modules &rarr;: rpi_ws281x, adafruit-circuitpython-neopixel
+* Pip modules &rarr; rpi_ws281x, adafruit-circuitpython-neopixel, flask
 
 
 ## ToDo
-- [x] Python script sends the entire array  
-~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed the arduino)
+~~Python script sends the entire array~~ (removed arduino)
+~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed arduino)
 - [ ] Change IP address in JS  
 - [x] Make pi run local server
 - [ ] Change hostname of pi
+- [ ] Room status is controlled independantly in Python script and JS &rarr; update this
