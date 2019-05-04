@@ -42,6 +42,18 @@ body {
   	align-items: center;
 }
 
+.path {
+	background-color: #444;
+  	color: #fff;
+
+  	font-size: 150%;
+  	cursor: pointer;
+  
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
 .room1 {
 	grid-column: 1;
 	grid-row: 1 / 3;

@@ -1,7 +1,6 @@
 # Interactive Museum
 
-A program to control WS2812b LEDs in a 1:200 scale model museum to demonstrate the user flow through the a museum.
-It will also allow rooms to be individually lit from a web-app running locally on the Pi.
+A program to control WS2812b LEDs in a 1:200 scale model museum to demonstrate the user flow through the a museum. It will also allow rooms to be individually lit from a web-app running locally on the Pi. In order to achieve the user flow animation, multi-threading will be required to allow the animation to run in the background.
 
 ## User Flow
 To demonstrate the user flow, LEDs will be stuck to the model in the same direction that users will walk through it. A simple function will illuminate the LEDs in sequencee and turn them off once the next is lit.
@@ -21,6 +20,13 @@ The Pi will be powered with by one supply through it's USB micro-B port, althoug
 * The electronics will be held in a plastic project enclosure box.
 * The LEDs will be attached to the ceiling of each floor in the model.
 
+
+## Pseudo
+On boot, the python script will run the user flow function and simultaneously load the webserver. The index page will show the four floor-plans, each floor-plan is a css grid and rooms are overlayed onto the image of the floor-plan. Selecting a div will send a URL request with the respective room and alter the css to demonstrate their state. The selection of any room in the floor-plan will end the user flow animation.
+
+In order to allow the animation to run while the webserver is running, a multi-thread process must be setup.
+
+
 ## Usage
 The Pi will be programmed to automatically start the webserver with the user flow function on boot. In order to change the behaviour, the user must connect to the Pi's AP and access the Pi's ip address on port 5000 in any web-browser.
 
@@ -39,3 +45,5 @@ The Pi will be programmed to automatically start the webserver with the user flo
 - [x] Make pi run local server  
 - [ ] Change hostname of pi  
 - [ ] Room status is controlled independantly in Python script and JS &rarr; update this  
+- [ ] Improve trheading
+- [ ] Only run user flow animation once
