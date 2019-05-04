@@ -45,5 +45,7 @@ The Pi will be programmed to automatically start the webserver with the user flo
 - [x] Make pi run local server  
 - [ ] Change hostname of pi  
 - [ ] Room status is controlled independantly in Python script and JS &rarr; update this  
-- [ ] Improve trheading
+- [ ] Improve threading
 - [ ] Only run user flow animation once
+- [ ] Change colour of LEDs going up vs going down
+- [x] Update UI with path animation button

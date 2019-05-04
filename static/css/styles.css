@@ -2,6 +2,24 @@ body {
 
 }
 
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.path {
+	background-color: #444;
+  	color: #fff;
+	width: 50%;
+	
+  	font-size: 150%;
+  	cursor: pointer;
+
+	text-align: center;
+
+	margin: 0.4em;
+}
+
 .body_container {
 	height: 100%;
 	display: flex;
@@ -31,18 +49,6 @@ body {
 }
 
 .room {
-	background-color: #444;
-  	color: #fff;
-
-  	font-size: 150%;
-  	cursor: pointer;
-  
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-}
-
-.path {
 	background-color: #444;
   	color: #fff;
 
