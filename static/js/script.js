@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	box.addEventListener("click", function() {
 	    var state = this.getAttribute('data-state');
 	    var room = this.classList[1];
-	    var URL = 'http://192.168.0.29:5000/' + room;
+	    var URL = 'http://192.168.0.10:5000/' + room;
 	    
 	    if (state === "off") {
 		this.style.backgroundColor = "#dcb";
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     Array.from(paths, function(box) {
 	box.addEventListener("click", function() {
-	    var URL = 'http://192.168.0.29:5000/path';
+	    var URL = 'http://192.168.0.10:5000/path';
 	    
 	    $.ajax({
 		url: URL,
@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     Array.from(down, function(box) {
 	box.addEventListener("click", function() {
-	    var URL = 'http://192.168.0.29:5000/shutdown';
+	    var URL = 'http://192.168.0.10:5000/shutdown';
 	    
 	    $.ajax({
 		url: URL,

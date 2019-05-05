@@ -42,7 +42,7 @@ The Pi will be programmed to automatically start the webserver with the user flo
 - [x] Run on boot (rc.local)
 - [x] Update room numbers
 - [x] Add shutdown button
-- [ ] Change IP address in JS  
+- [x] Change IP address in JS  
 - [x] Make pi run local server  
 - [ ] Improve threading
 - [ ] Only run user flow animation once
