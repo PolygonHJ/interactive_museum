@@ -7,6 +7,17 @@ body {
     margin: 0;
 }*/
 
+.shutdown {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+
+    top: 0;
+    left: calc(100% - 40px);
+
+    background-color: #C11B1B;
+}
+
 .path {
     background-color: #123;
     color: #fff;

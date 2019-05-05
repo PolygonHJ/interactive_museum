@@ -50,6 +50,27 @@ window.addEventListener("DOMContentLoaded", function() {
     	});
     });
 
+    
+    // Call to shutdown Pi
+    let down = document.querySelectorAll(".shutdown");
+    
+    Array.from(down, function(box) {
+	box.addEventListener("click", function() {
+	    var URL = 'http://192.168.0.29:5000/shutdown';
+	    
+	    $.ajax({
+		url: URL,
+		success: function(result) {
+		    console.log(result)
+		},
+		error: function(error) {
+		    console.log('Error ${error}')
+		}
+	    })
+	    
+    	});
+    });
+
 });
 
 

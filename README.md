@@ -39,15 +39,16 @@ The Pi will be programmed to automatically start the webserver with the user flo
 
 
 ## ToDo
-~~Python script sends the entire array~~ (removed arduino)  
-~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed arduino)  
 - [x] Run on boot (rc.local)
 - [x] Update room numbers
+- [x] Add shutdown button
 - [ ] Change IP address in JS  
 - [x] Make pi run local server  
-~~- [ ] Change hostname of pi~~
-~~- [ ] Room status is controlled independantly in Python script and JS &rarr; update this~~
 - [ ] Improve threading
 - [ ] Only run user flow animation once
 - [x] Change colour of LEDs going up vs going down
 - [x] Update UI with path animation button
+~~- [ ] Change hostname of pi~~  
+~~- [ ] Room status is controlled independantly in Python script and JS &rarr; update this~~
+~~Python script sends the entire array~~ (removed arduino)  
+~~Arduino need to interpret the array and turn on the specfic LEDs~~ (removed arduino)  

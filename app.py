@@ -3,6 +3,8 @@
 import board
 import neopixel
 
+from subprocess import call
+
 import threading
 import time
 
@@ -70,6 +72,13 @@ def handle_path():
     path_thr.start()
     
     return 'User flow animation', 200
+
+
+# Shutdown the Pi
+@app.route('/shutdown')
+def handle_shutdown():
+    call("sudo nohup shutdown -h now", shell=True)
+    return 'Shutting down Pi', 200
 
 
 
