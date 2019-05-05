@@ -1,39 +1,56 @@
 <html>
-<head>
-	<title>Museum of Bath</title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css') }}" />
-	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-</head>
-<body>
-	<div class="body_container">
-		<h1>Museum of Bath - Lighting Control</h1>
-
-		<div class="path">User Flow</div>
-		
-		<div class="floor_container">
-			<div class="floor">
-				<div class="room room1" data-state="off"></div>
-				<div class="room room2" data-state="off"></div>
-				<div class="room room3" data-state="off"></div>
-			</div>
+  <head>
+    <title>Museum of Bath</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css') }}" />
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  </head>
+  <body>
+    <div class="body_container">
+      <h1>Museum of Bath - Lighting Control</h1>
+      
+      <!--<div class="path">User Flow</div>-->
+      
+      <div class="floor_container">
+	<div class="floor">
+	  <div class="room room3" data-state="off">Cafe</div>
+	  <div class="room room2" data-state="off">Auditorium</div>
+	  <div class="room room1" data-state="off">Classroom</div>
+	</div>
 			
-			<div class="floor">
-			
-			
-			</div>
-			
-			<div class="floor">
-			
-			
-			</div>
-			
-			<div class="floor">
-			
-			
-			</div>
-		</div>
+	<div class="floor">
+	  <div class="room room40" data-state="off">Audio Archive</div>
+	  <div class="room room43" data-state="off">Classrooms</div>
+	  <div class="room room6" data-state="off">Contemporary</div>
+	  <div class="room room9" data-state="off">Postal</div>
+	</div>
+	
+	<div class="floor">
+	  <div class="room room16" data-state="off">Fashion History</div>
+	  <div class="room room13" data-state="off">Atelier</div>
+	  <div class="room room38" data-state="off">Works</div>
+	  <div class="room room35" data-state="off">Machinery</div>
+	</div>
+	
+	<div class="floor">
+	  <div class="room room30" data-state="off">Bottle</div>
+	  <div class="room room33" data-state="off">Essence Room</div>
+	  <div class="room room19" data-state="off">Royal Women</div>
+	  <div class="room room34" data-state="off">Offices</div>
 	</div>
 
-</body>
+	<div class="top_floor">
+	  <div class="room room29" data-state="off">Work</div>
+	  <div class="room room26" data-state="off">Cafe</div>
+	  <div class="room room21" data-state="off">Fashion</div>
+	  <div class="room room25" data-state="off">Bridge</div>
+	  <div class="room room24" data-state="off">Architecture</div>
+	</div>
+
+	<div class="path">User Flow</div>
+	
+      </div>
+    </div>
+    
+  </body>
 </html>

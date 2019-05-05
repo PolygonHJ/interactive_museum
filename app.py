@@ -14,8 +14,9 @@ from flask import render_template
 app = Flask(__name__)
 
 # Hardware setup
-pixels = neopixel.NeoPixel(board.D18, 3)
-rooms = [0, 0, 0]
+pixels = neopixel.NeoPixel(board.D18, 43)
+rooms = [0] * 43
+lights = [0] * 43
 
 
 # Setup the home page
@@ -45,13 +46,18 @@ def path():
     pixels.fill((0, 0, 0))
 
     # Run the animation while no rooms are lit
-    i = 0
+    i = 3
     while not any(rooms):
-        pixels[i] = (0, 50, 0)
+
+        if ( i < 25 ):
+            pixels[i] = (50, 0, 0)
+        else:
+            pixels[i] = (0, 0, 50)
+
         pixels[i-1] = (0, 0, 0)
         time.sleep(0.5)
         i += 1
-        if ( i > 2 ): i = 0
+        if ( i > 43 ): i = 3
     return
 
 
@@ -63,7 +69,7 @@ def handle_path():
     path_thr = threading.Thread(target=path)
     path_thr.start()
     
-    return 'Rainbow', 200
+    return 'User flow animation', 200
 
 
 

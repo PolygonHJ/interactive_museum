@@ -8,14 +8,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	    var URL = 'http://192.168.0.29:5000/' + room;
 	    
 	    if (state === "off") {
-		this.style.backgroundColor = "#ddd";
+		this.style.backgroundColor = "#dcb";
 		this.setAttribute('data-state', 'on');
 	    } else {
-		this.style.backgroundColor = "#444";
+		this.style.backgroundColor = "#123";
 		this.setAttribute('data-state', 'off');
 	    }
-	    
-	    console.log(room);
 	    
 	    $.ajax({
 		url: URL,
@@ -30,17 +28,19 @@ window.addEventListener("DOMContentLoaded", function() {
     	});
     });
 
+
+    // Call to start path animation
     let paths = document.querySelectorAll(".path");
     
     Array.from(paths, function(box) {
 	box.addEventListener("click", function() {
 	    var URL = 'http://192.168.0.29:5000/path';
-	    console.log(URL);
 	    
 	    $.ajax({
 		url: URL,
 		success: function(result) {
 		    console.log(result)
+		    check("room");
 		},
 		error: function(error) {
 		    console.log('Error ${error}')
@@ -51,3 +51,11 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+
+function check(x) {
+    elements = document.getElementsByClassName(x);
+    for (var i = 0; i < elements.length; i++) {
+	elements[i].style.backgroundColor="#123";
+    }
+}
