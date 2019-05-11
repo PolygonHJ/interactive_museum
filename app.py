@@ -16,9 +16,9 @@ from flask import render_template
 app = Flask(__name__)
 
 # Hardware setup
-pixels = neopixel.NeoPixel(board.D18, 43)
-rooms = [0] * 43
-lights = [0] * 43
+pixels = neopixel.NeoPixel(board.D18, 42)
+rooms = [0] * 42
+lights = [0] * 42
 
 
 # Setup the home page
@@ -50,8 +50,7 @@ def path():
     # Run the animation while no rooms are lit
     i = 3
     while not any(rooms):
-
-        if ( i < 25 ):
+        if ( i < 23 ):
             pixels[i] = (50, 0, 0)
         else:
             pixels[i] = (0, 0, 50)
@@ -59,7 +58,9 @@ def path():
         pixels[i-1] = (0, 0, 0)
         time.sleep(0.5)
         i += 1
-        if ( i > 43 ): i = 3
+        if ( i > 41 ):
+            pixels[41] = (0, 0, 0)
+            i = 3
     return
 
 
