@@ -6,14 +6,8 @@ A program to control WS2812b LEDs in a 1:200 scale model museum to demonstrate t
 
 | | |
 |:---:|:---:|
-| <img width="1604" alt="Demo Gif" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/demo.gif">  Demo Video | <img width="1604" alt="Lit Rooms" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/lit_rooms.png">  Rooms Lit |
-| <img width="1604" alt="Underside of Ceiling" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/below.png">  Underside of Ceiling | <img width="1604" alt="Side View" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/section.png">  Side View |
-
-
-
-![Underside of ceilings](https://github.com/PolygonHJ/interactive_museum/raw/master/assets/below.png "Underside")
-
-![Side view](https://github.com/PolygonHJ/interactive_museum/raw/master/assets/section.png "Side View")
+| <img width="800" alt="Demo Gif" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/demo.gif">  Demo Video | <img width="800" alt="Lit Rooms" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/lit_rooms.jpg">  Rooms Lit |
+| <img width="800" alt="Underside of Ceiling" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/below.jpg">  Underside of Ceiling | <img width="800" alt="Side View" src="https://github.com/PolygonHJ/interactive_museum/raw/master/assets/section.jpg">  Side View |
 
 </center>
 
